@@ -1,0 +1,14 @@
+name: redis-dev
+
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    environment:
+      - REDIS_PASSWORD=admin
+
+volumes:
+  redis-data:
